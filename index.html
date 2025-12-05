@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campuslands - Propuesta para Ecopetrol</title>
+  <meta name="description" content="Formación tecnológica de élite para hijos de colaboradores y jóvenes de zonas priorizadas por Ecopetrol">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a4d3e',
+            'primary-dark': '#0f2d25',
+            accent: '#f5c518',
+            'accent-dark': '#d4a913',
+            lime: '#8bc34a',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(-25%) translateX(-50%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+      50% { transform: translateY(0) translateX(-50%); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+    }
+    .animate-bounce { animation: bounce 1s infinite; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+
+ <!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- CONTENEDOR FLEX PRINCIPAL -->
+    <div class="flex justify-between items-center h-20">
+
+      <!-- LOGO ECOPETROL A LA IZQUIERDA -->
+      <div class="flex items-center">
+        <img src="images/logo-ecopetrol.jpg" alt="Logo Ecopetrol" class="h-16 w-auto object-contain">
+      </div>
+
+      <!-- MENÚ A LA DERECHA -->
+      <div class="hidden md:flex items-center gap-10">
+        <a href="#inicio" class="text-gray-600 hover:text-gray-900 transition-colors">Inicio</a>
+        <a href="#propuesta" class="text-gray-600 hover:text-gray-900 transition-colors">Propuesta</a>
+        <a href="#beneficios" class="text-gray-600 hover:text-gray-900 transition-colors">Beneficios</a>
+        <a href="#alineacion" class="text-gray-600 hover:text-gray-900 transition-colors">Alineación</a>
+        <a href="#invitacion" class="px-4 py-2 rounded-lg bg-accent hover:bg-accent-dark text-primary-dark font-semibold transition-colors">Visítanos</a>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+        <button id="mobileMenuBtn" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-200">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#inicio" class="block py-2 text-gray-600">Inicio</a>
+        <a href="#propuesta" class="block py-2 text-gray-600">Propuesta</a>
+        <a href="#beneficios" class="block py-2 text-gray-600">Beneficios</a>
+        <a href="#alineacion" class="block py-2 text-gray-600">Alineación</a>
+        <a href="#invitacion" class="block w-full text-center py-2 rounded-lg bg-accent text-primary-dark font-semibold">Visítanos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative pt-16 min-h-screen flex items-center overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-accent/20 via-gray-50 to-primary/10"></div>
+
+    <!-- Decorative elements -->
+    <div class="absolute top-32 right-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-primary border border-accent/30">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            </svg>
+            <span class="text-sm font-medium">Propuesta exclusiva para Ecopetrol</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Transformando el futuro de 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">familias y comunidades</span> 
+            de Ecopetrol
+          </h1>
+
+          <p class="text-xl text-gray-600 leading-relaxed max-w-xl">
+            Formamos jóvenes talentos en profesionales tecnológicos de clase mundial: <strong class="text-gray-900">hijos de colaboradores</strong> y <strong class="text-gray-900">jóvenes de zonas priorizadas</strong> por la responsabilidad social empresarial de Ecopetrol. Alineados con la <strong class="text-gray-900">Estrategia 2040</strong> y SosTECnibilidad®.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#invitacion" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent hover:bg-accent-dark text-primary-dark font-semibold text-lg transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+              Conoce Nuestras Instalaciones
+            </a>
+            <a href="#propuesta" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg border-2 border-gray-300 hover:border-primary text-gray-900 font-semibold text-lg transition-colors">
+              Ver la Propuesta
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
+            <div>
+              <div class="text-3xl font-bold text-accent">500+</div>
+              <div class="text-sm text-gray-600">Jóvenes Formados</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary">80%</div>
+              <div class="text-sm text-gray-600">Empleabilidad</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-accent">110+</div>
+              <div class="text-sm text-gray-600">Empresas Aliadas</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden border border-gray-200 shadow-2xl">
+            <img src="images/campers1.JPG" alt="Estudiantes de Campuslands" class="w-full h-auto">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 border border-gray-200">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-gray-900">Energía que Transforma</div>
+                    <div class="text-sm text-gray-600">Talento para la transición energética</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 animate-bounce">
+      <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section id="propuesta" class="py-24 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          <span class="text-sm font-medium">Propuesta de Valor</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Formación tecnológica de élite para familias y comunidades de Ecopetrol
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Un programa diseñado para impulsar el futuro de <strong class="text-gray-900">hijos de colaboradores</strong> y <strong class="text-gray-900">jóvenes de zonas priorizadas</strong> donde Ecopetrol genera impacto a través de su responsabilidad social empresarial.
+        </p>
+      </div>
+<!-- Video Placeholder -->
+<div class="mb-16">
+  <div class="max-w-4xl mx-auto">
+    <div class="relative aspect-video rounded-2xl overflow-hidden border-2 border-dashed border-accent/50 bg-white">
+
+      <!-- VIDEO REAL -->
+      <video autoplay muted controls playsinline preload="metadata" poster="video/poster.jpg" class="w-full h-full object-cover">
+        <source src="video/linea de tiempo 2.mp4" type="video/mp4">
+        
+      </video>
+      <!-- Two beneficiary groups -->
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <div class="p-6 rounded-xl bg-gradient-to-br from-accent/10 to-transparent border border-accent/30 hover:border-accent/50 transition-colors">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl mb-2 text-gray-900">Hijos de Colaboradores</h3>
+              <p class="text-gray-600">Becas de formación tecnológica para los hijos de trabajadores de Ecopetrol, fortaleciendo el bienestar familiar y el compromiso organizacional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/30 hover:border-primary/50 transition-colors">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl mb-2 text-gray-900">Jóvenes de Zonas Priorizadas</h3>
+              <p class="text-gray-600">Oportunidades para jóvenes de comunidades donde Ecopetrol desarrolla programas de responsabilidad social empresarial, generando impacto territorial sostenible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Four pillars -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group bg-white rounded-xl p-6 border border-gray-200 hover:border-accent/50 hover:shadow-xl transition-all">
+          <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900">Desarrollo de Software</h3>
+          <p class="text-gray-600">2,100 horas de formación intensiva en programación con estándares internacionales</p>
+        </div>
+        <div class="group bg-white rounded-xl p-6 border border-gray-200 hover:border-primary/50 hover:shadow-xl transition-all">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900">Inteligencia Artificial</h3>
+          <p class="text-gray-600">Capacitación en tecnologías de IA aplicadas a la industria energética</p>
+        </div>
+        <div class="group bg-white rounded-xl p-6 border border-gray-200 hover:border-accent/50 hover:shadow-xl transition-all">
+          <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900">Inglés Técnico</h3>
+          <p class="text-gray-600">Programa intensivo enfocado en comunicación profesional global</p>
+        </div>
+        <div class="group bg-white rounded-xl p-6 border border-gray-200 hover:border-primary/50 hover:shadow-xl transition-all">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2 text-gray-900">Habilidades Blandas</h3>
+          <p class="text-gray-600">Desarrollo de competencias socioemocionales para el entorno laboral</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="beneficios" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+            <span class="text-sm font-medium">Beneficios para Ecopetrol</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Impacto social medible en colaboradores y comunidades
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Una alianza que fortalece el bienestar de las familias de colaboradores y multiplica el impacto social en las zonas donde Ecopetrol desarrolla su gestión de responsabilidad social empresarial.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Becas completas de formación tecnológica para hijos de colaboradores</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Oportunidades para jóvenes de zonas priorizadas por RSE de Ecopetrol</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Alineación con el Programa de Diversidad, Equidad e Inclusión (DEI)</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Contribución a objetivos de SosTECnibilidad® y ODS</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Generación de talento tecnológico local para la transición energética</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Indicadores de impacto social verificables y reportes mensuales</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span class="text-gray-900">Fortalecimiento del legado social de Ecopetrol en los territorios</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl"></div>
+          <div class="relative grid grid-cols-2 gap-4">
+            <div class="p-6 bg-white rounded-xl border border-gray-200 hover:border-accent/50 transition-colors">
+              <div class="text-4xl font-bold text-accent mb-2">DEI</div>
+              <div class="text-sm text-gray-600">Diversidad, Equidad e Inclusión</div>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-colors">
+              <div class="text-4xl font-bold text-primary mb-2">2040</div>
+              <div class="text-sm text-gray-600">Estrategia Energética</div>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-gray-200 hover:border-primary/50 transition-colors">
+              <div class="text-4xl font-bold text-primary mb-2">ODS</div>
+              <div class="text-sm text-gray-600">Objetivos de Desarrollo Sostenible</div>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-gray-200 hover:border-accent/50 transition-colors">
+              <div class="text-4xl font-bold text-accent mb-2">RSE</div>
+              <div class="text-sm text-gray-600">Responsabilidad Social Empresarial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Alignment -->
+  <section id="alineacion" class="py-24 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-primary mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+          <span class="text-sm font-medium">Alineación Estratégica</span>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Alineados con la Estrategia 2040 de Ecopetrol
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nuestra propuesta contribuye directamente a los pilares estratégicos de "Energía que Transforma" y SosTECnibilidad®.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="relative overflow-hidden rounded-xl border border-gray-200 bg-white group hover:shadow-xl transition-all">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-accent/70"></div>
+          <div class="p-8">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">Crecer con la Transición Energética</h3>
+            <p class="text-gray-600 leading-relaxed">Formamos talento tecnológico preparado para los desafíos de la transición energética justa, desarrollando habilidades en IA, automatización y digitalización.</p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl border border-gray-200 bg-white group hover:shadow-xl transition-all">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/70"></div>
+          <div class="p-8">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">Generar Valor con SosTECnibilidad®</h3>
+            <p class="text-gray-600 leading-relaxed">Contribuimos a la agenda de sostenibilidad generando impacto social medible en las comunidades, fortaleciendo el tejido social en territorios estratégicos.</p>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-xl border border-gray-200 bg-white group hover:shadow-xl transition-all">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary"></div>
+          <div class="p-8">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">Conocimiento de Vanguardia</h3>
+            <p class="text-gray-600 leading-relaxed">Desarrollamos habilidades de vanguardia en programación, IA e inglés técnico, preparando a la nueva generación para la Cuarta Revolución Industrial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Proceso de Formación de Alto Impacto</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          5 etapas orientadas a disciplina, resiliencia y empleabilidad real.
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Connection line -->
+        <div class="absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-accent via-primary to-accent hidden lg:block"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="relative text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-accent to-primary text-white flex items-center justify-center text-2xl font-bold mb-4 relative z-10">1</div>
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Talent Up</h3>
+            <p class="text-sm text-gray-600">Reclutamiento y diagnóstico integral</p>
+          </div>
+          <div class="relative text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-accent to-primary text-white flex items-center justify-center text-2xl font-bold mb-4 relative z-10">2</div>
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Sandbox</h3>
+            <p class="text-sm text-gray-600">15 días de entrenamiento inicial</p>
+          </div>
+          <div class="relative text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-accent to-primary text-white flex items-center justify-center text-2xl font-bold mb-4 relative z-10">3</div>
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Bootcamp</h3>
+            <p class="text-sm text-gray-600">2,100 horas de formación intensiva</p>
+          </div>
+          <div class="relative text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-accent to-primary text-white flex items-center justify-center text-2xl font-bold mb-4 relative z-10">4</div>
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Tech Leap</h3>
+            <p class="text-sm text-gray-600">Preparación para empleabilidad</p>
+          </div>
+          <div class="relative text-center">
+            <div class="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-accent to-primary text-white flex items-center justify-center text-2xl font-bold mb-4 relative z-10">5</div>
+            <h3 class="font-semibold text-lg mb-2 text-gray-900">Inserción</h3>
+            <p class="text-sm text-gray-600">Conexión con empresas aliadas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Invitation Card Section -->
+  <section id="invitacion" class="py-24 bg-gradient-to-br from-accent/10 via-gray-50 to-primary/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Invitation Card -->
+        <div class="relative overflow-hidden rounded-2xl border-2 border-accent/30 bg-white shadow-2xl">
+          <!-- Decorative corner elements -->
+          <div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-accent/20 to-transparent"></div>
+          <div class="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl from-primary/20 to-transparent"></div>
+
+          <div class="relative p-8 md:p-12">
+            <div class="text-center mb-8">
+              <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent to-primary mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Invitación Especial</h2>
+              <div class="w-24 h-1 bg-gradient-to-r from-accent to-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-6 text-center">
+              <p class="text-xl text-gray-600 leading-relaxed">
+                Cordialmente invitamos al equipo de <strong class="text-gray-900">Ecopetrol</strong> a conocer las instalaciones de <strong class="text-accent">Campuslands</strong> y descubrir de primera mano cómo transformamos vidas a través de la tecnología.
+              </p>
+
+              <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <h3 class="font-semibold text-lg mb-4 text-gray-900">Durante su visita podrán:</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-left">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-900">Recorrer nuestras instalaciones de formación</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-900">Conocer nuestra metodología de enseñanza</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-900">Interactuar con estudiantes actuales</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-900">Revisar casos de éxito y testimonios</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-900">Discutir la propuesta de alianza estratégica</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-gray-900">Conocer Proyectos impulsados con Inteligencia Artificial</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-gray-200">
+                <p class="text-lg font-medium text-gray-900 mb-6">
+                  Los esperamos para construir juntos el futuro de las familias y comunidades de Ecopetrol
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="grid md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-gray-200">
+              <div class="flex items-center gap-3 justify-center md:justify-start">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs text-gray-600">Ubicación</div>
+                  <div class="text-sm font-medium text-gray-900">Zona Franca, Santander</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 justify-center md:justify-start">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs text-gray-600">Email</div>
+                  <div class="text-sm font-medium text-gray-900">maria.blanco@campuslands.com</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 justify-center md:justify-start">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="text-xs text-gray-600">Teléfono</div>
+                  <div class="text-sm font-medium text-gray-900">+57 (300) 8615282 </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Signature -->
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+              <div class="inline-flex items-center gap-4">
+                <div class="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center">
+                  <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
+                </div>
+                <div class="text-left">
+                  <div class="font-semibold text-lg text-gray-900">María Fernanda Blanco</div>
+                  <div class="text-sm text-gray-600">Directora de Patrocinios</div>
+                  <p class="text-sm text-accent italic mt-1">"Uniendo fuerzas, hackeamos vidas"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-gray-100 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+            </svg>
+          </div>
+          <span class="font-bold text-lg text-gray-900">Campuslands</span>
+        </div>
+        <p class="text-gray-600 text-center md:text-right">
+          © 2025 Campuslands. Transformando vidas a través de la tecnología.<br>
+          <span class="text-sm">Propuesta exclusiva para Ecopetrol S.A.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
